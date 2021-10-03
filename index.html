@@ -63,7 +63,7 @@
         }
         
         .a {
-            height: 1300px;
+            height: 1430px;
         }
     </style>
 </head>
@@ -93,7 +93,7 @@
     </div>
 </div>
 
-<body background="https://qiumuu.gitee.io/mdchat/web/2.jpg" style="background-attachment: fixed;background-repeat: no-repeat;background-size: 100% 100%">
+<body background="https://qiumuu.gitee.io/mdchat/bg01.jpg" style="background-attachment: fixed;background-repeat: no-repeat;background-size: 100% 100%">
     <div class="mdui-appbar mdui-shadow-0">
         <div class="mdui-toolbar mdui-text-color-black">
             <a href="javascript:;" mdui-drawer="{target:'#sidebar',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
@@ -115,67 +115,30 @@
 
                 <div class="mdui-panel-item mdui-panel-item-open ">
                     <div class="mdui-panel-item-header ">
-                        <div class="mdui-typo-body-2-opacity">友链</div>
-                    </div>
-                    <div class="mdui-row-xs-4">
-                        <div class="mdui-container">
-
-                            <li class="mdui-list-item mdui-ripple mdui-col" onclick="window.open('https://allife.top/');">
-                                <div class="mdui-list-item-avatar"><img src="https://qiumuu.gitee.io/mdchat/ico/zs.png"></div>
-                                <div class="mdui-list-item-content">
-                                    <div class="mdui-list-item-title">众生</div>
-                                    <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text"></span>建设中</div>
-                                </div>
-                            </li>
-
-                            <li class="mdui-list-item mdui-ripple mdui-col" onclick="window.open('http://viyrs.com/');">
-                                <div class="mdui-list-item-avatar"><img src="https://qiumuu.gitee.io/mdchat/ico/vf.png"></div>
-                                <div class="mdui-list-item-content">
-                                    <div class="mdui-list-item-title">维帆社</div>
-                                    <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text"></span>维米帆龄Gi会社</div>
-                                </div>
-                            </li>
-
-                            <li class="mdui-list-item mdui-ripple mdui-col" onclick="window.open('https://www.lihouse.xyz/');">
-                                <div class="mdui-list-item-avatar"><img src="https://www.lihouse.xyz/ico.php?mode=1"></div>
-                                <div class="mdui-list-item-content">
-                                    <div class="mdui-list-item-title">青柠博客</div>
-                                    <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text">人的一生要疯狂一次，无论是为一个人，一段情，一段旅途，或一个梦</span></div>
-                                </div>
-                            </li>
-                            <li class="mdui-list-item mdui-ripple mdui-col" onclick="window.open('https://gitee.com/zhulinu');">
-                                <div class="mdui-list-item-avatar"><img src="https://qiumuu.gitee.io/mdchat/ico/zl.png"></div>
-                                <div class="mdui-list-item-content">
-                                    <div class="mdui-list-item-title">竹林</div>
-                                    <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text"></span>这可是真的狗！
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mdui-list-item mdui-ripple mdui-col" onclick="window.open('https://gitee.com/toby_lai');">
-                                <div class="mdui-list-item-avatar"><img src="https://qiumuu.gitee.io/mdchat/ico/toby.png"></div>
-                                <div class="mdui-list-item-content">
-                                    <div class="mdui-list-item-title">Toby_lai</div>
-                                    <div class="mdui-list-item-text mdui-list-item-one-line"><span class="mdui-text-color-theme-text"></span>有时整整flask...时而做做pyqt5...时而做做html...
-                                    </div>
-                                </div>
-                            </li>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-
-                        </div>
-
-
+                        <div class="mdui-typo-body-2-opacity">留言板</div>
                     </div>
                     <div>&nbsp;</div>
+
+
+                    <div class="mdui-container">
+
+
+
+                        <div id="pagetalk"></div>
+                        <div>&nbsp;</div>
+                    </div>
+                    <script>
+                        new PageTalk({
+                            container: '#pagetalk',
+                            appId: 'D3fsiiYIxKKwtBYcSxJk4BfR-gzGzoHsz',
+                            appKey: 'lmLhdLOSgyWI9fpchm88hUSC'
+                        })
+                    </script>
+
                     <div>&nbsp;</div>
 
                 </div>
-                <div class="mdui-panel-item mdui-panel-item-open">
-                    <div class="mdui-panel-item-header ">
-                        <div>博客内容待更新</div>
-                    </div>
-                </div>
+
             </div>
             <div class="mdui-col-xs mdui-col-sm-3">
                 <div class="mdui-panel-item mdui-panel-item-open">
@@ -198,8 +161,9 @@
                             </li>
                             <div class="mdui-typo">
                                 <blockquote>
-                                  <p>凡是让人幸福的东西,往往又会成为他不幸的源泉。</p>
-                                  <footer>歌德 《少年维特之烦恼》</footer>
+                                  <div class="mdui-typo-body-1">民主使每个人成为自己的主宰。</div>
+
+                                  <footer>詹姆士·拉塞尔·洛威尔</footer>
                                 </blockquote>
                               </div>
                         </ul>
@@ -271,8 +235,7 @@
                                     </div>
                                 </li>
                                 <li class="mdui-list-item mdui-ripple "
-                                    onclick="window.open( 'https://space.bilibili.com/475755598'); "><i
-                                        class="fa fa-bold " aria-hidden="true "></i>
+                                    onclick="window.open( 'https://space.bilibili.com/475755598'); "><i class="fa fa-product-hunt" aria-hidden="true"></i>
                                     <div>&nbsp;</div>
                                     <div>&nbsp;</div>
                                     <div>&nbsp;</div>
@@ -330,39 +293,31 @@
                     </div>
                     <div class="mdui-panel-item mdui-panel-item-open">
                         <div class="mdui-container-fluid">
-    
-                            <div class="mdui-typo">
+                            <div class="mdui-typo mdui-container">
                                 <div>&nbsp;</div>
+                                <div class="mdui-typo-subheading">友链</div>
+                                <div class="mdui-typo-body-2"><a href="https://allife.top/">众生</a>&nbsp;<a href="http://viyrs.com/">维米帆龄Gi会社</a>&nbsp;<a href="https://www.lihouse.xyz/">青柠博客</a>&nbsp;<a href="https://gitee.com/zhulinu">竹林</a>&nbsp;<a href="https://tobylai.tk">Toby_lai</a>&nbsp;</div>
 
-                                <blockquote>
-                                  <h6>公告：博客中有关政治的内容全部搬至外网，请移步qiumu-blog.blogspot.com</h6>
-                                </blockquote>
+                                        <div>&nbsp;</div>
 
-                                <div>&nbsp;</div>
                             </div>
                             
                         </div>
                     
                     </div>
                     <div class="mdui-panel-item mdui-panel-item-open">
-                        <div class="mdui-container">
+                        <div class="mdui-container-fluid">
     
-                            <div class="mdui-container">
-                                <div>&nbsp;</div>
+                            <div class="mdui-typo">
                                 <div>&nbsp;</div>
 
+                                <blockquote>
+                                  <div class="mdui-typo-body-2-opacity">公告：博客中有关政治的内容全部搬至外网，请移步qiumu-blog.blogspot.com</div>
 
-                                <div id="pagetalk"></div>
-                                <div>&nbsp;</div>
+                                </blockquote>
+
                                 <div>&nbsp;</div>
                             </div>
-                            <script>
-                                new PageTalk({
-                                    container: '#pagetalk',
-                                    appId: 'D3fsiiYIxKKwtBYcSxJk4BfR-gzGzoHsz',
-                                    appKey: 'lmLhdLOSgyWI9fpchm88hUSC'
-                                })
-                            </script>
                             
                         </div>
                     
