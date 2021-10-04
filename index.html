@@ -11,13 +11,20 @@
     <link rel="shortcut icon" href="https://qiumuu.gitee.io/mdchat/web/3.jpg" type="image/x-icon">
     <title>秋木小站</title>
     <style>
-        .mdchat-form,
-        .mdchat-comment {
-            flex: 1;
-            margin-left: 15px;
+        .mdchat-container svg {
+            fill: #4f4f4f;
+            vertical-align: middle;
+            cursor: pointer
         }
         
-        .mdchat-form-inputs {}
+        .m d-section {
+            display: flex;
+            margin: 15px 0
+        }
+        
+        .mdchat-form-inputs {
+            display: flex
+        }
         
         .mdchat-form-inputs>input,
         .mdchat-textarea {
@@ -45,12 +52,25 @@
             overflow: auto
         }
         
+        .mdchat-textarea:empty::before,
+         ::placeholder {
+            content: attr(placeholder);
+        }
+        
         .mdchat-controls {
             display: flex
         }
         
         .mdchat-badge {
             flex: 1
+        }
+        
+        .mdchat-badge>a:first-child {
+            margin-right: 10px
+        }
+        
+        .mdchat-controls button {
+            font-size: .95em
         }
         
         .mdchat-profile a {
