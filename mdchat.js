@@ -29,10 +29,10 @@ class PageTalk {
         <div class="mdchat-section">
         <div class="mdchat-form">
         <div class="mdchat-form-inputs">
-        <input type="text" id="mdchat-nickname" value="${user.nickname}" maxlength="15" placeholder="昵称" class="mdui-textfield-input" type="email">
-        <input type="text" id="mdchat-email" value="${user.email}" maxlength="15" placeholder="邮箱" class="mdui-textfield-input">
-        <input type="text" id="mdchat-website" value="${user.website}" maxlength="15" placeholder="网站" class="mdui-textfield-input"></div></div>
-        <div class="mdchat-textarea mdui-textfield-input" placeholder="请输入内容" contenteditable="plaintext-only"></div>
+        <input type="text" id="mdchat-nickname" value="${user.nickname}" maxlength="20" placeholder="昵称" class="mdui-textfield-input" type="email">
+        <input type="text" id="mdchat-email" value="${user.email}" maxlength="20" placeholder="邮箱" class="mdui-textfield-input">
+        <input type="text" id="mdchat-website" value="${user.website}" maxlength="20" placeholder="网站" class="mdui-textfield-input"></div>
+        <div class="mdchat-textarea mdui-textfield-input" contenteditable="plaintext-only"></div>
         <div class="mdchat-controls">
         <div class="mdchat-badge">
         <div class="mdchat-message mdui-container-fluid"></div>
@@ -167,7 +167,6 @@ class PageTalk {
         }
         return true
     }
-
 
     setMessage(message, isError = false) {
         this.element.message.innerHTML = message
