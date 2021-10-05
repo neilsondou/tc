@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://www.qiumu.club</id>
     <title>秋木小站</title>
-    <updated>2021-10-05T10:35:18.727Z</updated>
+    <updated>2021-10-05T10:38:14.279Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://www.qiumu.club"/>
+    <link rel="self" href="https://www.qiumu.club/atom.xml"/>
     <subtitle>Man proposes, God disposes.</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://www.qiumu.club/images/avatar.png</logo>
+    <icon>https://www.qiumu.club/favicon.ico</icon>
     <rights>All rights reserved 2021, 秋木小站</rights>
     <entry>
         <title type="html"><![CDATA[分享  -  商品经济，还是产品经济? ]]></title>
-        <id>http://localhost:4000/post/5cFtt51Wi/</id>
-        <link href="http://localhost:4000/post/5cFtt51Wi/">
+        <id>https://www.qiumu.club/post/5cFtt51Wi/</id>
+        <link href="https://www.qiumu.club/post/5cFtt51Wi/">
         </link>
         <updated>2021-10-04T07:52:17.000Z</updated>
         <content type="html"><![CDATA[<p>如果不讲清背景，很多人不知道“商品经济”这个提法为什么会在中国一度成为政治斗争的焦点。事情还得从马克思说起。<br>
@@ -88,8 +88,8 @@ Mandcl)的《论马克思主义经济学》一书(下册，社会主义部分)�
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  “双峰政治”和“两点碰撞” ]]></title>
-        <id>http://localhost:4000/post/V7CH5yDLc/</id>
-        <link href="http://localhost:4000/post/V7CH5yDLc/">
+        <id>https://www.qiumu.club/post/V7CH5yDLc/</id>
+        <link href="https://www.qiumu.club/post/V7CH5yDLc/">
         </link>
         <updated>2021-10-04T07:48:01.000Z</updated>
         <content type="html"><![CDATA[<p>世界注目的中国经济体制改革，从上世纪70年代末发端，到现在整整进行了25年。<br>
@@ -201,8 +201,8 @@ Mandcl)的《论马克思主义经济学》一书(下册，社会主义部分)�
     </entry>
     <entry>
         <title type="html"><![CDATA[时事  -  习近平陕西行视察军区]]></title>
-        <id>http://localhost:4000/post/1wStRcJ2A/</id>
-        <link href="http://localhost:4000/post/1wStRcJ2A/">
+        <id>https://www.qiumu.club/post/1wStRcJ2A/</id>
+        <link href="https://www.qiumu.club/post/1wStRcJ2A/">
         </link>
         <updated>2021-10-04T07:37:41.000Z</updated>
         <content type="html"><![CDATA[<p>中共總書記習近平近日離開北京，前往陝西，期間除造訪共產黨革命遺址、出席全運會開幕式外，15日還到解放軍「駐陝西部隊某基地」視察，他強調要聚焦備戰打仗，加快創新發展，全面提升履行使命任務能力，要求官兵「為建設世界一流軍隊、建設航天強國作出更大貢獻。」</p>
@@ -214,8 +214,8 @@ Mandcl)的《论马克思主义经济学》一书(下册，社会主义部分)�
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  Rendering of Intel ARC Alchemist]]></title>
-        <id>http://localhost:4000/post/nEsZHlyF4/</id>
-        <link href="http://localhost:4000/post/nEsZHlyF4/">
+        <id>https://www.qiumu.club/post/nEsZHlyF4/</id>
+        <link href="https://www.qiumu.club/post/nEsZHlyF4/">
         </link>
         <updated>2021-10-04T07:27:16.000Z</updated>
         <content type="html"><![CDATA[<p>The main renders of Intel’s ARC Alchemist reference illustrations cards have been envisioned in the most recent break by Moore’s Law is Dead. The renders show us what Intel’s own reference configuration will resemble and a couple of goodies with respect to the dispatch of the work area ARC setup.</p>
@@ -235,8 +235,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  混血者的孤独]]></title>
-        <id>http://localhost:4000/post/aNcxc7dNa/</id>
-        <link href="http://localhost:4000/post/aNcxc7dNa/">
+        <id>https://www.qiumu.club/post/aNcxc7dNa/</id>
+        <link href="https://www.qiumu.club/post/aNcxc7dNa/">
         </link>
         <updated>2021-10-03T02:31:48.000Z</updated>
         <content type="html"><![CDATA[<p>季斯拉夫•苏尔科夫<br>
@@ -264,8 +264,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  戒色笔记与思考]]></title>
-        <id>http://localhost:4000/post/zc2Z9BgPQ/</id>
-        <link href="http://localhost:4000/post/zc2Z9BgPQ/">
+        <id>https://www.qiumu.club/post/zc2Z9BgPQ/</id>
+        <link href="https://www.qiumu.club/post/zc2Z9BgPQ/">
         </link>
         <updated>2021-10-03T02:23:24.000Z</updated>
         <content type="html"><![CDATA[<p>1.如果你凛然一觉，念头尚未消失，就说明你断念还不够火候。<br>
@@ -287,8 +287,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  女性到了美国 为什么就不愿回国了？]]></title>
-        <id>http://localhost:4000/post/yzBFAart3/</id>
-        <link href="http://localhost:4000/post/yzBFAart3/">
+        <id>https://www.qiumu.club/post/yzBFAart3/</id>
+        <link href="https://www.qiumu.club/post/yzBFAart3/">
         </link>
         <updated>2021-10-03T02:17:11.000Z</updated>
         <content type="html"><![CDATA[<p>我有个朋友在美国留学、后在美国工作二、三十年，退休后回到重庆，但是他的妻子（既没有美国的教育背景，也没有中国大学的文凭）却执意留在了美国。我来美国前，也曾请教过他，因之前对美国了解甚少——比较熟知的只是那些写在美国如何在餐馆辛苦打工、四处奔波的个人奋斗故事，所以临行前心情十分忐忑，我告诉他我担心自己不适应，我可能会很快回国的；况且我一直希望退休后能做些帮助山区孩子的事情。他却毅然断定，我一定会喜欢上美国的生活，慈善的事也许会做，但是回去的可能很小。他说他在美国认识的那么多华人，男性回国发展的多，但是女性回去的比例很小。</p>
@@ -322,8 +322,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  历史是如何让亲美变成仇美]]></title>
-        <id>http://localhost:4000/post/hQ38e_qaJ/</id>
-        <link href="http://localhost:4000/post/hQ38e_qaJ/">
+        <id>https://www.qiumu.club/post/hQ38e_qaJ/</id>
+        <link href="https://www.qiumu.club/post/hQ38e_qaJ/">
         </link>
         <updated>2021-10-03T02:15:50.000Z</updated>
         <content type="html"><![CDATA[<p>洪振快<br>
@@ -349,8 +349,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[评论  -  平民经济动向：姗姗来迟的消费主义]]></title>
-        <id>http://localhost:4000/post/z9oQ6JKz4/</id>
-        <link href="http://localhost:4000/post/z9oQ6JKz4/">
+        <id>https://www.qiumu.club/post/z9oQ6JKz4/</id>
+        <link href="https://www.qiumu.club/post/z9oQ6JKz4/">
         </link>
         <updated>2021-10-03T02:08:41.000Z</updated>
         <content type="html"><![CDATA[<p>秋木<br>
@@ -365,8 +365,8 @@ The top Alchemist 512 EU variation has only one setup recorded up until now and 
     </entry>
     <entry>
         <title type="html"><![CDATA[分享  -  对他人贬低一个宗教信仰能否表达抗议或不满]]></title>
-        <id>http://localhost:4000/post/-vk6bUCJu/</id>
-        <link href="http://localhost:4000/post/-vk6bUCJu/">
+        <id>https://www.qiumu.club/post/-vk6bUCJu/</id>
+        <link href="https://www.qiumu.club/post/-vk6bUCJu/">
         </link>
         <updated>2021-09-30T13:02:19.000Z</updated>
         <content type="html"><![CDATA[<p>一、批评和抗议的区别<br>
