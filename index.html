@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="https://qiumuu.gitee.io/mdchat/ico/3.jpg" type="image/x-icon">
     <script src="https://use.fontawesome.com/456dc7a54e.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js'></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <title>秋木小站</title>
     <style>
         .mdui-typo a {
@@ -81,12 +80,85 @@
         .bg {
             background: url(https://qiumuu.gitee.io/mdchat/1-11-bg.jpg);
             height: 750px;
+            width: 100%;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+        
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        .pace .pace-activity {
+            display: block;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: #000000;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+            transform: translateX(100%) translateY(-100%) rotate(45deg);
+            pointer-events: none;
+        }
+        
+        .pace.pace-active .pace-activity {
+            -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+            transform: translateX(50%) translateY(-50%) rotate(45deg);
+        }
+        
+        .pace .pace-activity::after {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            display: block;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            content: '';
+        }
+        
+        .pace .pace-activity::after {
+            bottom: 20px;
+            margin-left: -20px;
+            width: 40px;
+            height: 40px;
+            border-top-color: rgba(0, 0, 0, .2);
+            border-bottom-color: rgba(0, 0, 0, .2);
+            -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+            animation: pace-theme-corner-indicator-spin 1s linear infinite;
+        }
+        
+        @-webkit-keyframes pace-theme-corner-indicator-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+        
+        @keyframes pace-theme-corner-indicator-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(359deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="bg">
+    <div class="bg mdui-container-fluid">
         <div>&nbsp;</div>
         <div class="mdui-container">
             <div>&nbsp;</div>
@@ -116,7 +188,8 @@
                             <div class="mdui-dialog-title">关于我
                             </div>
                             <div class="mdui-dialog-content">
-                                <p>男&nbsp;&nbsp;高中生&nbsp;&nbsp;编程/键政/设计/绘画/音乐爱好者&nbsp;&nbsp;INTP</p>
+                                <h7>男&nbsp;&nbsp;高中生&nbsp;&nbsp;编程/键政/视觉设计/绘画/音乐爱好者&nbsp;&nbsp;</h7>
+                                <p>政治光谱：无政府主义&nbsp;&nbsp;人格测试：INTP&nbsp;&nbsp;</p>
                             </div>
 
                             <div class="mdui-dialog-actions">
@@ -130,8 +203,6 @@
                     &nbsp;</div>
             </div>
             <div>&nbsp;</div>
-
-
             <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=32785700&auto=0&height=66"></iframe>
         </div>
         <div>&nbsp;</div>
@@ -155,7 +226,6 @@
 
 
     </div>
-    </div>
     <div class="m2" id="gd">
         <div>&nbsp;</div>
         <div>&nbsp;</div>
@@ -165,130 +235,127 @@
         <div class="mdui-toolbar mdui-typo mdui-typow mdui-text-color-white-text">
             <div>&nbsp;</div>
             <div class="mdui-container">
-                <div class="mdui-container">
-                    <div class="mdui-container">
-                        <div class="mdui-container">
+                <div class="mdui-center" style="width: 200px">
+                    <div class="mdui-typo-body-2">
+                        <h5>归档 & 我的2021</h5> &nbsp;/&nbsp;
+                        <a onclick="window.open('https://qiumu-blog.vercel.app/atom.xml');">RSS</a> &nbsp;/&nbsp;
+                        <a onclick="window.open('https://qiumu-blog.vercel.app/');">博客</a> &nbsp;/&nbsp;
 
-                            <div class="mdui-typo-body-2">
-                                <h5>归档 & 我的2021</h5> &nbsp;/&nbsp;
-                                <a onclick="window.open('https://qiumu-blog.vercel.app/atom.xml');">RSS</a> &nbsp;/&nbsp;
-                                <a onclick="window.open('https://qiumu-blog.vercel.app/');">博客</a> &nbsp;/&nbsp;
+                        <a mdui-dialog="{target: '#2'}">点滴</a> &nbsp;/&nbsp;
+                        <div class="mdui-dialog" id="2">
+                            <div class="mdui-dialog-title">距高考还有
+                            </div>
+                            <div class="mdui-dialog-content">
+                                <div id="timer">&nbsp;</div>
+                            </div>
 
-                                <a mdui-dialog="{target: '#2'}">点滴</a> &nbsp;/&nbsp;
-                                <div class="mdui-dialog" id="2">
-                                    <div class="mdui-dialog-title">距高考还有
-                                    </div>
-                                    <div class="mdui-dialog-content">
-                                        <div id="timer">&nbsp;</div>
-                                    </div>
-
-                                    <div class="mdui-dialog-actions">
-                                        <button class="mdui-btn mdui-ripple  mdui-color-black" mdui-dialog-close>关闭</button>
-
-                                    </div>
-
-                                </div>
-                                <a mdui-dialog="{target: '#3'}">联系我</a> &nbsp;/&nbsp;
-                                <div class="mdui-dialog" id="3">
-                                    <div class="mdui-dialog-title">联系我
-                                    </div>
-                                    <div class="mdui-dialog-content">
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://github.com/lan-cn'); "><i class="fa fa-github-alt " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">github
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://gitee.com/qiumuu'); "><i class="fa fa-git " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">gitee
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.quora.com/profile/Kerwin-33'); "><i class="fa fa-quora " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">quora
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.zhihu.com/people/qiumuu'); "><i class="fa fa-search " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content">知乎
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.luogu.com.cn/user/374048'); "><i class="fa fa-cogs " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">洛谷
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://space.bilibili.com/475755598'); "><i class="fa fa-product-hunt" aria-hidden="true"></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">bilibili
-                                            </div>
-                                        </li>
-
-                                        <li class="mdui-list-item mdui-ripple "><i class="fa fa-weixin " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">dityoung
-                                            </div>
-                                        </li>
-                                        <li class="mdui-list-item mdui-ripple "><i class="fa fa-qq " aria-hidden="true "></i>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div>&nbsp;</div>
-                                            <div class="mdui-list-item-content ">82954066
-                                            </div>
-                                        </li>
-                                    </div>
-                                </div>
+                            <div class="mdui-dialog-actions">
+                                <button class="mdui-btn mdui-ripple  mdui-color-black" mdui-dialog-close>关闭</button>
 
                             </div>
+
+                        </div>
+                        <a mdui-dialog="{target: '#3'}">联系我</a> &nbsp;/&nbsp;
+                        <div class="mdui-dialog" id="3">
+                            <div class="mdui-dialog-title">联系我
+                            </div>
+                            <div class="mdui-dialog-content">
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://github.com/lan-cn'); "><i class="fa fa-github-alt " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">github
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://gitee.com/qiumuu'); "><i class="fa fa-git " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">gitee
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.quora.com/profile/Kerwin-33'); "><i class="fa fa-quora " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">quora
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.zhihu.com/people/qiumuu'); "><i class="fa fa-search " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content">知乎
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://www.luogu.com.cn/user/374048'); "><i class="fa fa-cogs " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">洛谷
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple " onclick="window.open( 'https://space.bilibili.com/475755598'); "><i class="fa fa-product-hunt" aria-hidden="true"></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">bilibili
+                                    </div>
+                                </li>
+
+                                <li class="mdui-list-item mdui-ripple "><i class="fa fa-weixin " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">dityoung
+                                    </div>
+                                </li>
+                                <li class="mdui-list-item mdui-ripple "><i class="fa fa-qq " aria-hidden="true "></i>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                    <div class="mdui-list-item-content ">82954066
+                                    </div>
+                                </li>
+                            </div>
+
                         </div>
 
                     </div>
+
                 </div>
             </div>
+
             <div>&nbsp;</div>
         </div>
         <div>&nbsp;</div>
@@ -319,33 +386,35 @@
         <div>&nbsp;</div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div class="mdui-toolbar mdui-typo mdui-typow mdui-text-color-white-text">
-            <div>&nbsp;</div>
-            <div class="mdui-center">
-                <div class="mdui-typo-body-2">
-                    <h5>友链</h5>
-                    <a href="https://allife.top/">众生</a>&nbsp;
-                    <a href="http://viyrs.com/">维米帆龄Gi会社</a>&nbsp;
-                    <a href="https://www.lihouse.xyz/">青柠博客</a>&nbsp;
-                    <a href="https://gitee.com/zhulinu">竹林</a>&nbsp;
-                    <a href="https://tobylai.tk">Toby_lai</a>&nbsp;
-                    <a href="https://www.hi-qiuqiu.top/">球球博客</a>&nbsp;
-                    <a href="https://www.tutime.cn/">土土博客</a>&nbsp;
-                    <a href="https://www.yamatu.top/">yamatublog</a>&nbsp;
-                    <a href="https://www.uwpg.xyz/">魂酱的博客</a>&nbsp;
-                    <a href="https://blog.truimo.com/">浅小沫的笔记</a>&nbsp;
 
+        <div class="mdui-typo mdui-typow mdui-text-color-white-text">
+            <div>&nbsp;</div>
+            <div class="mdui-container">
+                <div class="mdui-center" style="width: 700px">
+
+                    <div class="mdui-typo-body-2">
+                        <h5>友链</h5>
+                        <a href="https://allife.top/">众生</a>&nbsp;
+                        <a href="http://viyrs.com/">维米帆龄Gi会社</a>&nbsp;
+                        <a href="https://www.lihouse.xyz/">青柠博客</a>&nbsp;
+                        <a href="https://tobylai.tk">Toby_lai</a>&nbsp;
+                        <a href="https://www.hi-qiuqiu.top/">球球博客</a>&nbsp;
+                        <a href="https://www.tutime.cn/">土土博客</a>&nbsp;
+                        <a href="https://www.yamatu.top/">yamatublog</a>&nbsp;
+                        <a href="https://www.uwpg.xyz/">魂酱的博客</a>&nbsp;
+                        <a href="https://ncdwlq.space/">你才到碗里去</a>&nbsp;
+                        <a href="https://josephz.top/">Иосиф Чжан的博客</a>&nbsp;
+                        <a href="https://muspace.top/">沐の空间</a>&nbsp;
+                    </div>
                 </div>
+
             </div>
             <div>&nbsp;</div>
         </div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
+
 
     </div>
     <div>&nbsp;</div>
@@ -360,19 +429,6 @@
     <div>&nbsp;</div>
 
 </body>
-
-<script type="text/javascript">
-    var system = {};
-    var p = navigator.platform;
-    system.win = p.indexOf("Win") == 0;
-    system.mac = p.indexOf("Mac") == 0;
-    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
-    if (system.win || system.mac || system.xll) {
-        window.location.href = "#pc";
-    } else {
-        window.location.href = "/m.html";
-    }
-</script>
 <script type="text/javascript">
     var time_now_server, time_now_client, time_end, time_server_client;
 
